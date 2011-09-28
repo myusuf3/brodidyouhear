@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+<title>{% block title %}Bro Did You Hear?{% endblock title %}</title>
+
+<!--- lloogger tracking script -->
+<script type="text/javascript">
+lloogg_clientid = "1300230dddb8b85";
+</script>
+<script type="text/javascript" src="http://lloogg.com/l.js?c=1300230dddb8b85">
+</script>
+<!--- end lloogger tracking script -->
+
+<LINK HREF="{{STATIC_URL}}css/main.css" REL="stylesheet">
+</head>
+<body>
+	<header>
+		<img src="{{STATIC_URL}}images/logo.png" alt="Bro Did You Hear?">
+	</header> <!-- end header -->
+	
+	<div id="content" class="container_12">
+	
+		<section id="menu">
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="http://www.twitter.com/#!/brodidyouhear">Follow us on twitter <img src="{{STATIC_URL}}images/twitter.png" alt="twitter"></a></li>
+				</ul>
+			</nav>
+		</section> <!-- end menu -->
+		
+		<section id="comic"> 
+		{% block comic %}
+		
+			<div id="prev">
+				<h3><a href="/comic/{{pre_pk}}">Prev</a></h3>
+			</div> <!-- end prev -->
+			
+			<div id="caption">
+			{%block caption%}
+			<img src="" alt="{{comic.title}}">
+			{%endblock caption%}
+			</div> <!-- end caption -->
+			
+			<div id="next">
+				<h3><a href="/comic/{{next_pk}}">Next</a></h3>
+			</div> <!-- end next -->
+			
+			<div class="clear"></div>
+			
+			<div id="random">
+				<h2><a href="/comic/{{rand_pk}}">Random</a></h2>
+			</div> <!-- end random -->
+			
+			<div id="comic_banner">
+				
+				<div id="banner_left" class="grid_6">
+					<h2>Comic of the day</h2>
+				</div> <!-- banner_left -->
+				
+				<div id="banner_right" class="grid_6">
+					<p><img src="{{STATIC_URL}}images/tw.png" alt="Twitter"> <img src="{{STATIC_URL}}images/fb.png" alt="Facebook"> <img src="{{STATIC_URL}}images/gp.png" alt="Google Plus"></p>
+				</div> <!-- banner_right -->
+				
+				<div class="clear"></div>
+				
+			</div> <!-- comic_banner -->
+		{% endblock comic %}
+		</section> <!-- end comic -->
+		
+		
+	</div> <!-- end content -->
+	
+	<footer>
+	{% block footer %}
+		<div id="footer_left">
+		<p><span class="title">Bro, Did You Hear?</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+		</div> <!-- end footer_left -->
+		
+		<div id="footer_right">
+		<p>Got an idea for a comic, shoot us a line! If its good we will steal it!</p>
+
+		</div><!-- end footer_right -->
+		<div class="clear"></div>
+	{%endblock footer%}
+	</footer> <!-- end footer -->
+		<center><p class="copyright">Designed by <a href="http://twitter.com/vmnrd">@vmnrd</a></center>
+	
+</body>
+</html>

@@ -19,7 +19,7 @@ font-size:14px;
 }
 	
 body {
-background:url(../media/background.jpg) repeat-x white;
+background:url(../images/background.jpg) repeat-x white;
 font-family:tahoma, arial;
 font-size:12px;
 }
@@ -53,7 +53,7 @@ margin-right: 10px;
 	#menu {
 	width:960px;
 	height:77px;
-	background:url(../media/nav.png) no-repeat;
+	background:url(../images/nav.png) no-repeat;
 	}
 		
 		nav {

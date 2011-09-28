@@ -1,5 +1,3 @@
-from random import randint
-
 from django.shortcuts import render, get_object_or_404
 from django.db import models
 from models import Comic

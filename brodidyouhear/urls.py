@@ -7,9 +7,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-     url(r'^$', 'webcomic.views.index', name='home'),
-     url(r'^comic/(?P<id>\d+)/$', 'webcomic.views.comic', name='game'),
-     url(r'^random$', 'webcomic.views.random', name = 'random'),
+     url(r'^$', 'webcomic.views.index', name='index_comic'),
+     url(r'^comic/(?P<id>\d+)/$', 'webcomic.views.comic', name='comic_view'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
  	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

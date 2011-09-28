@@ -44,3 +44,7 @@ def comic(request, id):
 	# print 'rand_pk value: ' , rand_pk
 
 	return render(request, 'comic.html', {'comic': comic, 'next_pk': next_pk, 'pre_pk': pre_pk, 'rand_pk': rand_pk})
+
+
+def server_error(request):
+	return render(request, '500.html')

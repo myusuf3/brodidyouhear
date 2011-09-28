@@ -4,6 +4,6 @@ brodidyouhear: Web Comic
 
 Simple idea for deployment practice.
 
-.. image:: http://brodidyouhear.com/~myusuf3/pictures/Qvn5pd.png
+.. image:: https://github.com/myusuf3/brodidyouhear/raw/master/brodidyouhear/webcomic/static/images/logo.png
 
 

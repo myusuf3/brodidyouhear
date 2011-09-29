@@ -13,6 +13,35 @@ lloogg_clientid = "1300230dddb8b85";
 </script>
 <!--- end lloogger tracking script -->
 
+
+<!-- Google Plus -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<!-- end Google Plus -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16383952-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- end Google Analytics -->
+
+
 <LINK HREF="{{STATIC_URL}}css/main.css" REL="stylesheet">
 </head>
 <body>
@@ -26,7 +55,7 @@ lloogg_clientid = "1300230dddb8b85";
 			<nav>
 				<ul>
 					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
+					<li><a href="/">About</a></li>
 					<li><a href="http://www.twitter.com/#!/brodidyouhear">Follow us on twitter <img src="{{STATIC_URL}}images/twitter.png" alt="twitter"></a></li>
 				</ul>
 			</nav>
@@ -62,7 +91,16 @@ lloogg_clientid = "1300230dddb8b85";
 				</div> <!-- banner_left -->
 				
 				<div id="banner_right" class="grid_6">
-					<p><img src="{{STATIC_URL}}images/tw.png" alt="Twitter"> <img src="{{STATIC_URL}}images/fb.png" alt="Facebook"> <img src="{{STATIC_URL}}images/gp.png" alt="Google Plus"></p>
+				<a href="http://twitter.com/share?url={{tweet_url}}&text={{tweet}}" target="_blank">
+					<p><img src="{{STATIC_URL}}images/tw.png" alt="Twitter"></a>
+
+
+
+					<a href="https://www.facebook.com/sharer.php?u={{tweet_url}}&t={{comic_title_encode}}">
+					<img src="{{STATIC_URL}}images/fb.png" alt="Facebook"> </a>
+
+					<!-- <img src="{{STATIC_URL}}images/gp.png" alt="Google Plus"></p> -->
+					<g:plusone href="http://www.brodidyouhear.com"></g:plusone>
 				</div> <!-- banner_right -->
 				
 				<div class="clear"></div>
@@ -77,7 +115,7 @@ lloogg_clientid = "1300230dddb8b85";
 	<footer>
 	{% block footer %}
 		<div id="footer_left">
-		<p><span class="title">Bro, Did You Hear?</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+		<p><span class="title">Bro, Did You Hear?</span> Daily news in comic form for them bros out there! </p>
 		</div> <!-- end footer_left -->
 		
 		<div id="footer_right">

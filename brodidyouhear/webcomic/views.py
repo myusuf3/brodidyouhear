@@ -71,7 +71,12 @@ def comic(request, id):
 	# print 'pre_pk value: ' ,  pre_pk
 	# print 'rand_pk value: ' , rand_pk
 
-	return render(request, 'comic.html', {'comic': comic, 'next_pk': next_pk, 'pre_pk': pre_pk, 'rand_pk': rand_pk})
+	tweet = urlencode_tweet_text(comic.title)
+	tweet_url = urlencode_tweet_url(curr_pk)
+	comic_title_encode = urlencode_comic_title(comic.title)
+
+	return render(request, 'comic.html', {'comic': comic, 'next_pk': next_pk, 'pre_pk': pre_pk, 'rand_pk': rand_pk, 
+							'tweet': tweet, 'tweet_url': tweet_url, 'comic_title_encode': comic_title_encode})
 
 
 def server_error(request):

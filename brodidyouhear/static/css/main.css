@@ -106,6 +106,17 @@ margin-right: 10px;
 			text-transform:uppercase;
 			}
 	
+	#about {padding:20px;}
+	#about h1 {font-size:24px; color:#d24330; margin:0 0 10px 0;}
+	#about h2 {font-size:18px; color:#d24330; margin:10px 0 10px 0;}
+	#about p { margin-bottom:20px;}
+	#about ul {list-style-type:none;}
+	.author {font-size:14px; font-weight:bold;}
+	
+	#about_left{width:400px; float:left;}
+	#about_right{width:400px; float:right;}
+	
+	
 	#random {
 	position:relative;
 	left:400px;

@@ -3,14 +3,50 @@
 <head>
   <meta charset="utf-8" />
 
-<title> Bro Did You Hear?</title>
+<title>Bro Did You Hear? | About Us</title>
 
-<LINK HREF="/static/css/main.css" REL="stylesheet">
+<!--- lloogger tracking script -->
+<script type="text/javascript">
+lloogg_clientid = "1300230dddb8b85";
+</script>
+<script type="text/javascript" src="http://lloogg.com/l.js?c=1300230dddb8b85">
+</script>
+<!--- end lloogger tracking script -->
+
+
+<!-- Google Plus -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<!-- end Google Plus -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16383952-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- end Google Analytics -->
+
+<LINK HREF="{{STATIC_URL}}css/main.css" REL="stylesheet">
 </head>
 <body>
 	<header>
 
-		<img src="/static/images/logo.png" alt="Bro Did You Hear?">
+		<img src="{{STATIC_URL}}images/logo.png" alt="Bro Did You Hear?">
 	</header> <!-- end header -->
 	
 	<div id="content" class="container_12">
@@ -21,33 +57,16 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="/">About</a></li>
 
-					<li><a href="http://www.twitter.com/#!/brodidyouhear">Follow us on twitter <img src="/static/images/twitter.png" alt="twitter"></a></li>
+					<li><a href="http://www.twitter.com/#!/brodidyouhear">Follow us on twitter <img src="{{STATIC_URL}}/images/twitter.png" alt="twitter"></a></li>
 				</ul>
 			</nav>
 		</section> <!-- end menu -->
 		
 		<section id="comic"> 
 		
-			<div id="about">
-			<h1>Get fun everyday with a comic!</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
-			since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five 
-			centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release 
-			of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-			of Lorem Ipsum.</p>
-			<div id="about_left">
-			<h2>Meet the team!</h2>
-			<ul>
-				<li><span class="author">Mahdi Yusuf</span> - developer & talented cartoonist</li>
-				<li><span class="author">Valentin Menardie</span> - designer & front-end developer</li>
-			</ul>
-			</div>
-			<div id="about_right">
-			<h2>Contact us!</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-			</div>
-			<div class="clear"></div>
-			</div> <!-- end about-->
+		{% block about %}
+
+		{% endblock about %}
 
 			
 			<div id="comic_banner">
@@ -58,13 +77,13 @@
 
 				
 				<div id="banner_right" class="grid_6">
-				<a href="http://twitter.com/share?url=http%3A//brodidyouhear.com/comic/3&text=Bro%20Did%20You%20Hear%3F%20Android%20Ice%20Cream%20//cc%20%40brodidyouhear" target="_blank">
-					<p><img src="/static/images/tw.png" alt="Twitter"></a>
+				<a href="http://twitter.com/share?url={{tweet_url}}&text={{tweet}}" target="_blank">
+					<p><img src="{{STATIC_URL}}images/tw.png" alt="Twitter"></a>
 
 
 
-					<a href="https://www.facebook.com/sharer.php?u=http%3A//brodidyouhear.com/comic/3&t=Android%20Ice%20Cream">
-					<img src="/static/images/fb.png" alt="Facebook"> </a>
+					<a href="https://www.facebook.com/sharer.php?u={{tweet_url}}&t={{comic_title_encode}}">
+					<img src="{{STATIC_URL}}images/fb.png" alt="Facebook"> </a>
 
 					<!-- <img src="/static/images/gp.png" alt="Google Plus"></p> -->
 

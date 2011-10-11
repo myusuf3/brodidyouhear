@@ -79,7 +79,19 @@ margin-right: 10px;
 	width:940px;
 	background:white;
 	}
-	
+		#title {
+		width:900px; 
+		height:37px; 
+		background:url(../images/title.png) no-repeat; 
+		margin-bottom:20px;
+		}
+		
+		#title h1{
+		color:white; 
+		font-size:24px; 
+		padding:3px 0 0 10px;
+		}
+		
 		#caption {
 		width:600px;
 		height:450px;
@@ -119,7 +131,9 @@ margin-right: 10px;
 	
 	#random {
 	position:relative;
-	left:400px;
+	left:50%;
+	margin-left:-50px;
+	width:100px;
 	top:20px;
 	z-index:10;
 	}
